@@ -69,6 +69,128 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2019-11-09" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/09/2019-11-09/" class="article-date">
+  <time datetime="2019-11-08T17:23:00.000Z" itemprop="datePublished">2019-11-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/09/2019-11-09/">2019.11.09</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2019年11月9日01:23:48</p>
+</blockquote>
+<p>忙了一晚上终于忙出个结果，<br>好多东西现学现做的<br>不太熟练<br>以后慢慢补上基础<br>最后一个小错误，写错名字调了好久…<br>烦人<br>希望我做的能得到学长的认可吧</p>
+<img src="/2019/11/09/2019-11-09/JDBC20191109.gif" class="" title="第一个JDBC成品">
+
+<p>好累呀，以后进实验室就不熬夜了</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/09/2019-11-09/" data-id="ck2qewubh0001b0v95pge50bh" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-第一个JDBC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/" class="article-date">
+  <time datetime="2019-11-08T12:38:52.000Z" itemprop="datePublished">2019-11-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/">第一个JDBC</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019年11月8日21:01:59</p>
+<h2 id="第一步成功"><a href="#第一步成功" class="headerlink" title="第一步成功"></a>第一步成功</h2><p>记得是  <code>Ctrl+alt+O</code>  打开mk网页预览呀！</p>
+
+
+
+<p>终于，我完成了第一步！</p>
+<img src="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/%E7%AC%AC%E4%B8%80%E6%9D%A1%E8%AF%AD%E5%8F%A5.png" class="" title="第一条语句插入成功">
+
+<h2 id="这个过程比较艰难"><a href="#这个过程比较艰难" class="headerlink" title="这个过程比较艰难"></a>这个过程比较艰难</h2><ul>
+<li>第一个问题</li>
+</ul>
+<p><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code><br>此行语句出错，<br>提示过好像是版本问题<br><code>Loading class &#39;com.mysql.jdbc.Driver&#39;. This is deprecated. The new driver class is &#39;com.mysql.cj.jdbc.Driver&#39;</code>.<br>查询后<br><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</code><br>改正解决</p>
+<ul>
+<li>第二个问题</li>
+</ul>
+<p>遇到了我的密码中有英文时候出现错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 使用JDBC连接MySql时出现：The server time zone value &apos;�й���׼ʱ��&apos; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration</span><br></pre></td></tr></table></figure>
+<p>然后花了好大功夫进行了修改密码的操作，<br>有三种修改mysql密码的操作，试了最后一种才不报错</p>
+<img src="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" class="" title="密码修改">
+<p>访问了这个网页 <a href="https://blog.csdn.net/Exception_sir/article/details/82111014" target="_blank" rel="noopener">解决办法</a><br>成功修改之后还是不成功<br>依然是这个问题<br>最后再进行错误查询，<br>需要在<br><code>conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/myspj?serverTimezone=UTC&quot;, &quot;root&quot;,
+                    &quot;19990310&quot;);</code><br>那里补上一句很丑的话 <code>?serverTimezone=UTC&quot;</code><br>这个好像是什么时区错误<br>然后成功解决</p>
+<blockquote>
+<p>2019年11月8日21:53:41</p>
+</blockquote>
+<p>executequery这个东西也成功了，现在可以独立的完成JDBC了</p>
+<ul>
+<li><p><strong>问题1</strong></p>
+<p>  解决eclipse，异常捕捉时自动生成的<code>// TODO 自动生成的 catch 块</code><br><a href="https://blog.csdn.net/qq_34265010/article/details/94739425" target="_blank" rel="noopener">解决办法</a><br>决定休息一下下，继续战斗</p>
+</li>
+<li><p><strong>问题2</strong></p>
+<p>  少包的时候不能自动提示少的东西<br>  <a href="https://blog.csdn.net/RichardLoveMyFamily/article/details/76962989" target="_blank" rel="noopener">解决方案</a></p>
+</li>
+</ul>
+<p><code>期间有很小的问题，不至于说</code></p>
+<ul>
+<li><strong>问题3</strong><br>  最后调试的时候发现数据库名字写错了…多搞了一个小时….<br>  以后要细心啊！</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/" data-id="ck2qewubu000bb0v9fsticg95" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-2019-11-08" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/08/2019-11-08/" class="article-date">
@@ -102,11 +224,15 @@
 <p>第二节英语课老师让各科自由复习，非常nice<br>看了一节课的JDBC，感觉还行<br>但是没有完全记住，晚上要好好弄</p>
 <p>感觉脱发严重，洗一次头掉一二十根头发，<br>以后一定要少熬夜！！<br>我认真的<br>我发际线两侧好像就是比别人高很多<br>这应该是基因的问题，<br>但是还是应该少熬夜，不然该更严重了！</p>
 <p>下午物理实验，近代史<br>近代史准备好好看jdbc，加油！！</p>
+<blockquote>
+<p>2019年11月8日19:14:21</p>
+</blockquote>
+<p>近代史乖乖的看了整节课的jdbc大概在b站上学了一半了<br>觉得这个黑马的这个老师讲的真的不错<br>现在开始准备实战了！<br>加油！<br>Java这本书这上面讲的不是很好，还是看视频吧！<br>干他！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/08/2019-11-08/" data-id="ck2pnlae3000kdsv991qnh7v7" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/08/2019-11-08/" data-id="ck2qewudp000tb0v9gf0w0hvn" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li></ul>
@@ -148,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/08/note/" data-id="ck2pnlae5000mdsv973eb1165" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/08/note/" data-id="ck2qewubt000ab0v9f5uzag5x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
@@ -207,7 +333,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/07/2019-11-07/" data-id="ck2pnladc0001dsv98oxnhuuc" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/07/2019-11-07/" data-id="ck2qewudn000sb0v9g7qr1ayg" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%88%86%E6%89%8B/" rel="tag">分手</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%B1%E7%9C%A0/" rel="tag">失眠</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li></ul>
@@ -253,7 +379,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/06/2019-11-06/" data-id="ck2pnlad40000dsv9dgyibkmz" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/06/2019-11-06/" data-id="ck2qewub50000b0v98n0c1xam" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li></ul>
@@ -291,7 +417,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Welcome-to-CupidTian-s-blog-https-www-cupidtian-club"><a href="#Welcome-to-CupidTian-s-blog-https-www-cupidtian-club" class="headerlink" title="Welcome to [CupidTian`s blog](https://www.cupidtian.club)"></a>Welcome to [CupidTian`s blog](<a href="https://www.cupidtian.club" target="_blank" rel="noopener">https://www.cupidtian.club</a>)</h2><h1 id="My-name-is-Yifan-Tian"><a href="#My-name-is-Yifan-Tian" class="headerlink" title="My name is Yifan Tian."></a>My name is Yifan Tian.</h1><h2 id="CupidTian-is-my-new-English-name"><a href="#CupidTian-is-my-new-English-name" class="headerlink" title="CupidTian is my new English name."></a>CupidTian is my new English name.</h2><p>[^Welcome!]： 欢迎光临！</p>
+        <h1 id="My-name-is-Yifan-Tian"><a href="#My-name-is-Yifan-Tian" class="headerlink" title="My name is Yifan Tian."></a>My name is Yifan Tian.</h1><h2 id="CupidTian-is-my-new-English-name"><a href="#CupidTian-is-my-new-English-name" class="headerlink" title="CupidTian is my new English name."></a>CupidTian is my new English name.</h2><p>Welcome to [CupidTian`s blog](<a href="https://www.cupidtian.club" target="_blank" rel="noopener">https://www.cupidtian.club</a>)</p>
 <ul>
 <li><p>This website is just for my <strong>lost love</strong> and <strong>daily life</strong>.</p>
 </li>
@@ -324,7 +450,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/06/Welcome/" data-id="ck2pnlaeh000vdsv9besucp31" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/06/Welcome/" data-id="ck2qewue10013b0v9et8vh3mq" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/first/" rel="tag">first</a></li></ul>
@@ -346,7 +472,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
     </div>
   </div>
 
@@ -366,7 +492,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JDBC/" style="font-size: 10px;">JDBC</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 10px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 10px;">实验室</a> <a href="/tags/%E7%88%B1/" style="font-size: 20px;">爱</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+      <a href="/tags/JDBC/" style="font-size: 20px;">JDBC</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 10px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 20px;">实验室</a> <a href="/tags/%E7%88%B1/" style="font-size: 20px;">爱</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
     </div>
   </div>
 
@@ -388,6 +514,14 @@
       <ul>
         
           <li>
+            <a href="/2019/11/09/2019-11-09/">2019.11.09</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/">第一个JDBC</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/08/2019-11-08/">2019.11.08</a>
           </li>
         
@@ -397,14 +531,6 @@
         
           <li>
             <a href="/2019/11/07/2019-11-07/">2019.11.07</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/2019-11-06/">2019.11.06</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/06/Welcome/">First blog</a>
           </li>
         
       </ul>

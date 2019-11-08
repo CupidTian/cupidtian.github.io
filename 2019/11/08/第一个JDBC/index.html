@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>第一个JDBC | Yifan Tian`s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2019年11月8日21:01:59 第一步成功记得是  Ctrl+alt+O  打开mk网页预览呀！    终于，我完成了第一步！   这个过程比较艰难 第一个问题  Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;);此行语句出错，提示过好像是版本问题Loading class &amp;#39;com.mysql.jdbc.Driver&amp;#39;. Th">
+<meta name="keywords" content="JDBC,实验室">
+<meta property="og:type" content="article">
+<meta property="og:title" content="第一个JDBC">
+<meta property="og:url" content="http:&#x2F;&#x2F;cupidtian.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC&#x2F;index.html">
+<meta property="og:site_name" content="Yifan Tian&#96;s blog">
+<meta property="og:description" content="2019年11月8日21:01:59 第一步成功记得是  Ctrl+alt+O  打开mk网页预览呀！    终于，我完成了第一步！   这个过程比较艰难 第一个问题  Class.forName(&amp;quot;com.mysql.jdbc.Driver&amp;quot;);此行语句出错，提示过好像是版本问题Loading class &amp;#39;com.mysql.jdbc.Driver&amp;#39;. Th">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http:&#x2F;&#x2F;cupidtian.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC&#x2F;%E7%AC%AC%E4%B8%80%E6%9D%A1%E8%AF%AD%E5%8F%A5.png">
+<meta property="og:image" content="http:&#x2F;&#x2F;cupidtian.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC&#x2F;%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png">
+<meta property="og:updated_time" content="2019-11-08T17:22:14.353Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http:&#x2F;&#x2F;cupidtian.club&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC&#x2F;%E7%AC%AC%E4%B8%80%E6%9D%A1%E8%AF%AD%E5%8F%A5.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Yifan Tian`s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yifan Tian`s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Just for my lost Love and Daily life.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/">Love</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://cupidtian.club"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-第一个JDBC" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/" class="article-date">
+  <time datetime="2019-11-08T12:38:52.000Z" itemprop="datePublished">2019-11-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      第一个JDBC
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>2019年11月8日21:01:59</p>
+<h2 id="第一步成功"><a href="#第一步成功" class="headerlink" title="第一步成功"></a>第一步成功</h2><p>记得是  <code>Ctrl+alt+O</code>  打开mk网页预览呀！</p>
+
+
+
+<p>终于，我完成了第一步！</p>
+<img src="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/%E7%AC%AC%E4%B8%80%E6%9D%A1%E8%AF%AD%E5%8F%A5.png" class="" title="第一条语句插入成功">
+
+<h2 id="这个过程比较艰难"><a href="#这个过程比较艰难" class="headerlink" title="这个过程比较艰难"></a>这个过程比较艰难</h2><ul>
+<li>第一个问题</li>
+</ul>
+<p><code>Class.forName(&quot;com.mysql.jdbc.Driver&quot;);</code><br>此行语句出错，<br>提示过好像是版本问题<br><code>Loading class &#39;com.mysql.jdbc.Driver&#39;. This is deprecated. The new driver class is &#39;com.mysql.cj.jdbc.Driver&#39;</code>.<br>查询后<br><code>Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;);</code><br>改正解决</p>
+<ul>
+<li>第二个问题</li>
+</ul>
+<p>遇到了我的密码中有英文时候出现错误</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 使用JDBC连接MySql时出现：The server time zone value &apos;�й���׼ʱ��&apos; is unrecognized or represents more than one time zone. You must configure either the server or JDBC driver (via the serverTimezone configuration</span><br></pre></td></tr></table></figure>
+<p>然后花了好大功夫进行了修改密码的操作，<br>有三种修改mysql密码的操作，试了最后一种才不报错</p>
+<img src="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81.png" class="" title="密码修改">
+<p>访问了这个网页 <a href="https://blog.csdn.net/Exception_sir/article/details/82111014" target="_blank" rel="noopener">解决办法</a><br>成功修改之后还是不成功<br>依然是这个问题<br>最后再进行错误查询，<br>需要在<br><code>conn = DriverManager.getConnection(&quot;jdbc:mysql://localhost:3306/myspj?serverTimezone=UTC&quot;, &quot;root&quot;,
+                    &quot;19990310&quot;);</code><br>那里补上一句很丑的话 <code>?serverTimezone=UTC&quot;</code><br>这个好像是什么时区错误<br>然后成功解决</p>
+<blockquote>
+<p>2019年11月8日21:53:41</p>
+</blockquote>
+<p>executequery这个东西也成功了，现在可以独立的完成JDBC了</p>
+<ul>
+<li><p><strong>问题1</strong></p>
+<p>  解决eclipse，异常捕捉时自动生成的<code>// TODO 自动生成的 catch 块</code><br><a href="https://blog.csdn.net/qq_34265010/article/details/94739425" target="_blank" rel="noopener">解决办法</a><br>决定休息一下下，继续战斗</p>
+</li>
+<li><p><strong>问题2</strong></p>
+<p>  少包的时候不能自动提示少的东西<br>  <a href="https://blog.csdn.net/RichardLoveMyFamily/article/details/76962989" target="_blank" rel="noopener">解决方案</a></p>
+</li>
+</ul>
+<p><code>期间有很小的问题，不至于说</code></p>
+<ul>
+<li><strong>问题3</strong><br>  最后调试的时候发现数据库名字写错了…多搞了一个小时….<br>  以后要细心啊！</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/" data-id="ck2qewubu000bb0v9fsticg95" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/09/2019-11-09/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          2019.11.09
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/08/2019-11-08/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2019.11.08</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/" rel="tag">first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%89%8B/" rel="tag">分手</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%B1%E7%9C%A0/" rel="tag">失眠</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JDBC/" style="font-size: 20px;">JDBC</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 10px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 20px;">实验室</a> <a href="/tags/%E7%88%B1/" style="font-size: 20px;">爱</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/09/2019-11-09/">2019.11.09</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/%E7%AC%AC%E4%B8%80%E4%B8%AAJDBC/">第一个JDBC</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/2019-11-08/">2019.11.08</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/note/">note</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/07/2019-11-07/">2019.11.07</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CupidTian<br>
+      Seted_by <a href="http://www.cupidtian.club/" target="_blank">CupidTian</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/" class="mobile-nav-link">Love</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
