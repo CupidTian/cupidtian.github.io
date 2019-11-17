@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>mybatis-generator生成文件 | Yifan Tian`s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="之前学的jdbc派上了用场让我知道这些配置文件里面东西的作用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071&amp;lt;?xml version=&amp;quot;1.0&amp;quot; enc">
+<meta name="keywords" content="实验班,配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mybatis-generator生成文件">
+<meta property="og:url" content="http:&#x2F;&#x2F;cupidtian.club&#x2F;2019&#x2F;11&#x2F;16&#x2F;mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE&#x2F;index.html">
+<meta property="og:site_name" content="Yifan Tian&#96;s blog">
+<meta property="og:description" content="之前学的jdbc派上了用场让我知道这些配置文件里面东西的作用 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071&amp;lt;?xml version=&amp;quot;1.0&amp;quot; enc">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-11-16T14:40:55.101Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Yifan Tian`s blog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Yifan Tian`s blog</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Just for my lost Love and Daily life.</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/">Love</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://cupidtian.club"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-mybatis-generator生成文件配置" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" class="article-date">
+  <time datetime="2019-11-16T14:36:09.000Z" itemprop="datePublished">2019-11-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      mybatis-generator生成文件
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>之前学的jdbc派上了用场<br>让我知道这些配置文件里面东西的作用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span><br><span class="line">&lt;!DOCTYPE generatorConfiguration PUBLIC &quot;-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN&quot;   </span><br><span class="line">    &quot;http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd&quot; &gt;  </span><br><span class="line">  </span><br><span class="line">&lt;!-- 此文件只是mybatis 的数据库自动生成映射文件，实体类，接口等方法的，发布时，不用提交此文件，也可删除 --&gt;  </span><br><span class="line">  </span><br><span class="line">&lt;generatorConfiguration&gt;  </span><br><span class="line">    &lt;!-- 引用的jdbc的类路径，这里将jdbc jar和generator的jar包放在一起了 --&gt;  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;!-- 首先这个地方要改 --&gt;</span><br><span class="line">    &lt;classPathEntry location=&quot;E:\JavaWeb_about\JavaWeb_tools\mysql-connector-java-8.0.18.jar&quot;/&gt;  </span><br><span class="line"></span><br><span class="line">    &lt;context id=&quot;context1&quot; targetRuntime=&quot;MyBatis3Simple&quot;&gt;  </span><br><span class="line">        &lt;commentGenerator&gt;  </span><br><span class="line">            &lt;!-- 是否去除自动生成的注释 true：是 ： false:否 --&gt;  </span><br><span class="line">            &lt;property name=&quot;suppressAllComments&quot; value=&quot;false&quot;/&gt;  </span><br><span class="line">            &lt;property name=&quot;suppressDate&quot; value=&quot;true&quot; /&gt; &lt;!-- 是否生成注释代时间戳--&gt;    </span><br><span class="line">          &lt;/commentGenerator&gt;  </span><br><span class="line">        &lt;!-- 指定的jdbc的连接信息 --&gt;  </span><br><span class="line">        &lt;jdbcConnection   </span><br><span class="line">            driverClass=&quot;com.mysql.cj.jdbc.Driver&quot;   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">            &lt;!-- 这个地方当然也要改 --&gt;</span><br><span class="line">            connectionURL=&quot;jdbc:mysql://127.0.0.1:3306/pathlocation?useUnicode=true&amp;amp;characterEncoding=utf8&amp;amp;serverTimezone=UTC&quot;   </span><br><span class="line">            userId=&quot;root&quot;   </span><br><span class="line">            password=&quot;19990310&quot; /&gt;  </span><br><span class="line">        &lt;!-- 类型转换 --&gt;    </span><br><span class="line">        &lt;javaTypeResolver&gt;    </span><br><span class="line">            &lt;!-- 是否使用bigDecimal， false可自动转化以下类型（Long, Integer, Short, etc.） --&gt;    </span><br><span class="line">            &lt;property name=&quot;forceBigDecimals&quot; value=&quot;false&quot;/&gt;    </span><br><span class="line">        &lt;/javaTypeResolver&gt;    </span><br><span class="line">        &lt;!-- 生成实体类地址 Model --&gt;         </span><br><span class="line">        &lt;javaModelGenerator targetPackage=&quot;com.mypackage.web.model.arrange&quot; targetProject=&quot;fortest\src&quot; &gt;  </span><br><span class="line">            &lt;!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] --&gt;    </span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot;/&gt;    </span><br><span class="line">            &lt;!-- 是否针对string类型的字段在set的时候进行trim调用 --&gt;    </span><br><span class="line">            &lt;property name=&quot;trimStrings&quot; value=&quot;true&quot;/&gt;    </span><br><span class="line">        &lt;/javaModelGenerator&gt;  </span><br><span class="line">        &lt;!-- 生成map.xml文件 XML --&gt;       </span><br><span class="line">        &lt;sqlMapGenerator targetPackage=&quot;com.mypackage.web.sql.dao.mapper.arrange&quot; targetProject=&quot;fortest\src&quot; &gt;  </span><br><span class="line">            &lt;!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] --&gt;    </span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot; /&gt;   </span><br><span class="line">        &lt;/sqlMapGenerator&gt;  </span><br><span class="line">        &lt;!-- 生成map.xml对应client，也就是接口DAO --&gt;    </span><br><span class="line">        &lt;javaClientGenerator targetPackage=&quot;com.mypackage.web.sql.dao.mapper.arrange&quot; targetProject=&quot;fortest\src&quot; type=&quot;XMLMAPPER&quot; &gt;  </span><br><span class="line">            &lt;!-- 是否在当前路径下新加一层schema,eg：fase路径com.oop.eksp.user.model， true:com.oop.eksp.user.model.[schemaName] --&gt;    </span><br><span class="line">            &lt;property name=&quot;enableSubPackages&quot; value=&quot;false&quot; /&gt;   </span><br><span class="line">        &lt;/javaClientGenerator&gt;  </span><br><span class="line">        &lt;!--   </span><br><span class="line">            schema：数据库名   </span><br><span class="line">            tableName：对应的数据库表   </span><br><span class="line">            domainObjectName：要生成的实体类   </span><br><span class="line">            enable*ByExample： 是否生成 example类     </span><br><span class="line">        --&gt;     </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">        &lt;!-- 这个地方不得不改 --&gt;</span><br><span class="line">        &lt;!-- domainObjectName好像就是那个领域对象，这个名是后来生成的Java类,所以要大写首字母，名称随意 --&gt;</span><br><span class="line">       &lt;table schema=&quot;fortest&quot; tableName=&quot;company&quot; domainObjectName=&quot;Company&quot;</span><br><span class="line">            enableCountByExample=&quot;true&quot;  enableDeleteByExample=&quot;false&quot;   </span><br><span class="line">            enableSelectByExample=&quot;false&quot;  enableUpdateByExample=&quot;true&quot;&gt;</span><br><span class="line">            &lt;!-- 这个地方是老师之前项目的配置代码，所以可以先不管 --&gt;</span><br><span class="line">             &lt;!--&lt;property name=&quot;rootClass&quot; value=&quot;com.mypackage.web.model.BeanObj&quot;/&gt; --&gt;</span><br><span class="line">             &lt;generatedKey column=&quot;companyId&quot; sqlStatement=&quot;MySql&quot; identity=&quot;true&quot;/&gt; &lt;!-- identity是否唯一 --&gt;</span><br><span class="line">        &lt;/table&gt;  </span><br><span class="line">  &lt;/context&gt;  </span><br><span class="line">&lt;/generatorConfiguration&gt;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" data-id="ck336wrww001qgsv9gu064dbz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" rel="tag">实验班</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C#可视化程序设计
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/11/16/Spring%E5%AD%A6%E4%B9%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Spring学习</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A5%BD%E6%96%87/">好文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/Spring/">Spring</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/" rel="tag">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/" rel="tag">first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%89%8B/" rel="tag">分手</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E6%B2%B9/" rel="tag">加油</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%B1%E7%9C%A0/" rel="tag">失眠</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" rel="tag">实验班</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B4%AF/" rel="tag">累</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%B1%E5%8F%91/" rel="tag">脱发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%A3%E5%86%B3/" rel="tag">解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%AE%E7%9B%98/" rel="tag">键盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/JDBC/" style="font-size: 13.33px;">JDBC</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 10px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%8A%A0%E6%B2%B9/" style="font-size: 10px;">加油</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 20px;">实验室</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" style="font-size: 10px;">实验班</a> <a href="/tags/%E7%88%B1/" style="font-size: 16.67px;">爱</a> <a href="/tags/%E7%B4%AF/" style="font-size: 10px;">累</a> <a href="/tags/%E8%84%B1%E5%8F%91/" style="font-size: 10px;">脱发</a> <a href="/tags/%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">解决</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a> <a href="/tags/%E9%94%AE%E7%9B%98/" style="font-size: 10px;">键盘</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">C#可视化程序设计</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/">mybatis-generator生成文件</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/16/Spring%E5%AD%A6%E4%B9%A0/">Spring学习</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/16/2019-11-16/">2019.11.16</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/15/2019-11-15/">2019.11.15</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 CupidTian<br>
+      Seted_by <a href="http://www.cupidtian.club/" target="_blank">CupidTian</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/" class="mobile-nav-link">Love</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
