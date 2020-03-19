@@ -69,6 +69,540 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2019-11-24" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/24/2019-11-24/" class="article-date">
+  <time datetime="2019-11-24T15:44:46.000Z" itemprop="datePublished">2019-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/24/2019-11-24/">2019年11月24日</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天是进实验室的第一天</p>
+<p>没想到宝宝讨厌的人在这里- -</p>
+<p>王卓建暴露了我的身份</p>
+<p>讨厌zcc</p>
+<p>王卓建憨憨</p>
+<p>第一天的实验室生活我学到了现在</p>
+<p>以后继续努力哈哈</p>
+<p>2019年11月24日23:46:02</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/24/2019-11-24/" data-id="ck7ys4enc000egsv9abxocny8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Linux学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/24/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2019-11-24T15:11:57.660Z" itemprop="datePublished">2019-11-24</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/24/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2019年11月24日23:12:01</p>
+</blockquote>
+<ul>
+<li><p>Linux是Linus·s Unix改过来的的</p>
+</li>
+<li><p>Windows</p>
+<ul>
+<li>单用户，多任务</li>
+</ul>
+</li>
+<li><p>Linux</p>
+<ul>
+<li><p>多用户，多任务</p>
+<p>没有单任务的计算机现在</p>
+</li>
+</ul>
+</li>
+<li><p>服务器的稳定性非常的好</p>
+<p>  一台服务器可以1000多天不关机</p>
+</li>
+<li><p>linux是内核</p>
+<ul>
+<li>分支是Ubuntu之类的  </li>
+</ul>
+</li>
+</ul>
+<p>命令学习</p>
+<ul>
+<li>shutdown <ul>
+<li>shutdown -h now</li>
+</ul>
+</li>
+<li>halt</li>
+<li>init 0</li>
+</ul>
+<ul>
+<li><p>VM备份</p>
+<ul>
+<li><p>快照：又称还原点，就是在保存快照时的系统状态，在后期可以随时恢复</p>
+<ul>
+<li>【侧重点在于短期备份、需要频繁的使用备份】</li>
+<li>做快照的时候虚拟机操作系统一般在开启</li>
+<li>看演示非常简单</li>
+</ul>
+</li>
+<li><p>克隆：【侧重于长期备份】</p>
+<ul>
+<li>一定在关闭状态上</li>
+</ul>
+</li>
+<li><p>我的理解：</p>
+<ul>
+<li>大概就是快照在自己电脑上，克隆可以转到别人电脑上</li>
+<li>快照大概就是虚拟的文件，克隆是实体的文件，跟老师上次发的一样</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>日常运维的操作，有一半的精力都是对文件进行操作<ul>
+<li>Linux本身就是一个基于对文件操作的系统</li>
+<li>目录就是文件夹</li>
+<li>Linux一切皆文件</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>目录结构<ul>
+<li>Bin：全称Binary，含义是二进制。该目录存储的都是一些二进制文件</li>
+<li>Dev：该目录主要存放的是外接设备，比如插入一个U盘，被识别在Dev目录下<br>  外接设备不能直接被使用，需要挂载<br>  在windows里，插入U盘自动给 识别成U盘或H盘，但咱Linux下要手动，这个叫分配盘符（挂载）</li>
+<li>Etc：主要是存储一些配置文件。</li>
+<li>Home：除了root用户以外，其他用户的家目录，类似于windows下User/用户目录</li>
+<li>proc：process：进程目录。不要打开这个目录，因为里面的东西太多了，会卡屏</li>
+<li>root：是root用户自己的家目录</li>
+<li>Sbin：Super binary，里面也是二进制文件，但是必须有super权限的用户才执行</li>
+<li>tmp：临时目录</li>
+<li>usr：存放用户自己安装的软件，windows，类似于windows下program files</li>
+<li>var：存放系统日志</li>
+<li>mnt：当外接设备需要挂载的时候，需要挂载到mnt目录下</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>linux指令</p>
+<ul>
+<li><p>一些命令</p>
+<pre><code>* 基础指令
+    * ls
+    * pwd
+    * cd 
+    * mkdir
+    * touch
+    * cp
+    * mv 
+    * rm
+    * vim
+    * 输出重定向
+    * cat</code></pre></li>
+<li><p>ls：（list）</p>
+<ul>
+<li><p>这些选项的顺序都是无所谓的</p>
+</li>
+<li><p>列出所以文件和文件夹</p>
+</li>
+<li><p>相对路径的写法：经常使用2个符号“./”【当前目录下】,”../“【上一级目录下】</p>
+<ul>
+<li><p>ls root 和 ls ./root一样此时</p>
+</li>
+<li><p>ls -l  以详细列表的形式列出，列出的有权限信息，修改时间，字节大小等</p>
+<ul>
+<li>“-、d” 开头 是表示文件的信息，是文件夹还是文件<ul>
+<li>“-”是文件</li>
+<li>“d”是文件夹</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>ls -la a的表示是列出所有的文件、文件夹，包括隐藏文件  </p>
+<ul>
+<li>以上这两个用的非常的多</li>
+<li>隐藏文件一般以“.”开头</li>
+</ul>
+</li>
+<li><p>ls -lah</p>
+<ul>
+<li>h的含义就是以更有可读性的形式来输出文件、文件夹的信息（其实就是文件大小，自动变成M、kb的形式）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>列出的文件注意一下颜色</p>
+<ul>
+<li>蓝色的表示文件夹</li>
+<li>黑色的表示文件</li>
+<li>绿色的表示拥有所有权限</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>pwd</p>
+<ul>
+<li>print working directory 打印当前工作目录</li>
+</ul>
+</li>
+<li><p>cd</p>
+<ul>
+<li>change directory</li>
+<li>“~”代表家目录，直接进入root了(你现在是root用户的情况下，你要是jackietian，你进入的就是home/jackietian)</li>
+</ul>
+</li>
+<li><p>mkdir</p>
+<ul>
+<li>make directory（创建目录、创建不了文件）</li>
+<li>mkdir 路径</li>
+<li>假设你现在root下没有目录<ul>
+<li>mkdir 路径 表示在当前文件夹存在的条件下再创建一个文件（夹）</li>
+<li>mkdir -p 路径： 表示在文件夹下比如说root/a/b/c/d 可以依次自动的创建</li>
+<li>mkdir 路径1 路径2 路径3 ： 可以创建多个文件，但是这个用的比较少</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>touch</p>
+<ul>
+<li>touch 路径</li>
+</ul>
+</li>
+<li><p>cp</p>
+<ul>
+<li>cp 被目标路径 目标路径</li>
+<li>记住：这样复制的时候还可以顺便改一下目标名字（但一般不这样做）</li>
+<li>如果要复制文件夹的时候 要加入-r参数 否则会略过<ul>
+<li>-r 表示递归复制</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>mv</p>
+<ul>
+<li>移动、重命名</li>
+<li>move<ul>
+<li>mv 需要移动的文档路径 目标位置</li>
+</ul>
+</li>
+<li>这个也可以在移动过程中改名字</li>
+<li>移动不需要递归</li>
+<li>当然你原地移动的意思不就相当于重命名嘛！</li>
+</ul>
+</li>
+<li><p>rm</p>
+<ul>
+<li>移除命令</li>
+<li>remove<ul>
+<li>rm 路径<ul>
+<li>在删除的时候会提示要不要删除，让你输入y or n</li>
+<li>但是在Ubuntu下没有这个提示，会直接删除</li>
+</ul>
+</li>
+<li>rm -f 路径<ul>
+<li>-f的意思是强制删除</li>
+</ul>
+</li>
+<li>注意，在删除目录的时候会不让你删，提示这是一个目录<ul>
+<li>所以，就要用force了</li>
+<li>而且删除的是文件夹，还需要进行递归调用</li>
+</ul>
+</li>
+<li>rm -rf 文件夹路径<ul>
+<li>这样就可以完成删除啦</li>
+</ul>
+</li>
+<li>rm -rf linux*<ul>
+<li>可以把该文件夹下开头为linux的文件全部删除（不知道文件夹删除不）</li>
+<li>这个“ * ”此时的含义，是通配符</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>技巧* </p>
+<ul>
+<li>如果一些路径的首字母什么的路径名是唯一的，那可以按tab进行补全</li>
+<li>vim<ul>
+<li>超强文本编辑器，文本编辑器之神</li>
+<li>通过vim 打开文件或不存在的文件<ul>
+<li>退出的话按住 shift + :  然后输入q</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>输出重定向<ul>
+<li>ls -lha &gt; ls.txt可以新建一个文件把ls目录添加在ls.txt里面<ul>
+<li><blockquote>
+<p>可以覆盖</p>
+</blockquote>
+</li>
+<li><blockquote>
+<blockquote>
+<p>就是追加</p>
+</blockquote>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>cat<ul>
+<li>cat 文件路径<ul>
+<li>直接在终端中打开一个文件，而不是像vim一样其实是一个新窗口再退出</li>
+</ul>
+</li>
+<li>cat 待合并路径1 待合并路径2 … 待合并路径n &gt; 目标文件<ul>
+<li>可以合并多个文件到一个文件下，非常的神奇<blockquote>
+<p>   现在是2019年11月26日21:37:35 学习网页是[Linux入门到精通]<a href="https://www.bilibili.com/video/av23360560?p=20" target="_blank" rel="noopener">https://www.bilibili.com/video/av23360560?p=20</a><br>目前看到了了p18  day2-06 基础命令（6）了<br>改天继续肝，先去看看maven什么的</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/24/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" data-id="ck7ys4eng000jgsv98cwk4n6r" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-备忘录" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/24/%E5%A4%87%E5%BF%98%E5%BD%95/" class="article-date">
+  <time datetime="2019-11-24T06:34:56.000Z" itemprop="datePublished">2019-11-24</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/24/%E5%A4%87%E5%BF%98%E5%BD%95/">备忘录</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2019年11月24日14:35:10</p>
+</blockquote>
+<ul>
+<li><p>下一个Ubuntu16.04</p>
+<ul>
+<li><p>一个是server版的</p>
+<ul>
+<li>相比下没有GUI好像</li>
+</ul>
+</li>
+<li><p>一个是desktop版的</p>
+</li>
+<li><p>安装的过程中出错了，都解决了</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>2019年11月24日22:41:45</p>
+</blockquote>
+<p>学长布置的新任务</p>
+<ul>
+<li>学习Linux_desktop里面指令集，文件<ul>
+<li>学长发的图是linux的盘符和文件</li>
+<li>这个和运维有关系</li>
+<li>虽然我们用的都是Windows，但是服务器端的全都是Linux<ul>
+<li>看见学长电脑好像是用一个软件来管理好几台服务器，里面全是linux指令</li>
+</ul>
+</li>
+<li>2019年11月26日21:38:50 目前学习到了基础指令</li>
+</ul>
+</li>
+<li>学习Maven<ul>
+<li>jar包管理</li>
+</ul>
+</li>
+<li>学习Jsp</li>
+<li>Tomcat</li>
+<li>Severlet</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/24/%E5%A4%87%E5%BF%98%E5%BD%95/" data-id="ck7ys4enz0011gsv9f8h0h8ar" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-数据库上机实验1(1123)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C1(1123)/" class="article-date">
+  <time datetime="2019-11-23T03:34:30.000Z" itemprop="datePublished">2019-11-23</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/">数据库开发技术</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C1(1123)/">2019.11.23</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2019年11月23日11:34:57</p>
+</blockquote>
+<p>现在是上机实验</p>
+<p>终于完成了我对C#winform的数据库连接<br>迈出了一大步，哈哈哈<br>贴出图片</p>
+<img src="/2019/11/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C1(1123)/I28AV6$%7DL6D0T~I_$R_NBGT.png" class="" title="第一次数据库连接">
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C1(1123)/" data-id="ck7ys4eo40017gsv993tfb4fa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C#</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-2019-11-20" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/11/20/2019-11-20/" class="article-date">
+  <time datetime="2019-11-20T09:38:53.000Z" itemprop="datePublished">2019-11-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Diary/">Diary</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/11/20/2019-11-20/">2019.11.20</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>2019年11月20日17:42:54</p>
+</blockquote>
+<p>嘻嘻嘻，有回对象之后<br>许久没有写日记了<br>看来我的宝贝让我忘记烦恼<br>哈哈哈</p>
+<hr>
+<p>宝宝今天中午吃饭吃着吃着老哭….<br>我今后一定要继续好好对她！！！<br>俺要变强（俺也变秃了）</p>
+<hr>
+<p>下午体育课腰疼的上不了<br>瞎胡投投篮…<br>臭宝宝现在不会上篮了…<br>连投篮也不会了…<br>还一直气我是别的小哥哥教的…<br>气死我了(╬◣д◢)</p>
+<hr>
+<p>洗完澡，取快递，<br>人没那么多<br>回寝躺尸…<br>现在准备学会习….<br>晚上去领奖学金发放表哈哈哈</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://cupidtian.club/2019/11/20/2019-11-20/" data-id="ck7ys4en7000agsv9az0b8ecw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%85%B0/" rel="tag">腰</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-C#可视化程序设计" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" class="article-date">
@@ -97,11 +631,54 @@
 </ul>
 </li>
 </ol>
+<ol start="2">
+<li><p>在代码提示的时候</p>
+<ul>
+<li>扳手代表属性</li>
+<li>闪电代表事件<ul>
+<li>双击</li>
+<li>单机</li>
+</ul>
+</li>
+<li>还有一个代表方法</li>
+</ul>
+</li>
+<li><p>this.close();</p>
+<ul>
+<li>代表退出当前窗体</li>
+</ul>
+</li>
+<li><p>ContextMenuStrip</p>
+<ul>
+<li>右键菜单</li>
+<li>托盘(notifyicon)</li>
+<li>菜单menustrip</li>
+</ul>
+</li>
+</ol>
+<ol start="5">
+<li><p>调用另一个form</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">private void Button1_Click(object sender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           var frm = new Form2();//新建一个对象，因为这个form2在被创建项目的时候，自动声明的是一个类，所以说要定义一个新的对象2019年11月18日17:34:44</span><br><span class="line">           frm.Show(this);//这个应该是传递了一个参数（自己）给form2</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改另一个form的值</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">private void Button1_Click(object sender, EventArgs e)</span><br><span class="line">       &#123;</span><br><span class="line">           (this.Owner as Form1).label1.Text = &quot;Jackie&quot;;//那个this.owner应该是form2的调用者（form1）</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>radiobutton</p>
+<p> 让radiobutton默认有一个选项可以双击他现在的区域：在load（动作）内修改</p>
+</li>
+<li><p>隐藏</p>
+<p> 基本上任何一个控件都有Visible属性 让他等于true就行</p>
+</li>
+<li><p>groupbox </p>
+<p> 常常配合radiobutton来使用</p>
+</li>
+</ol>
+<hr>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" data-id="ck336wrvx000ggsv964kacrwe" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/" data-id="ck7ys4en50009gsv93qkadtca" class="article-share-link">Share</a>
       
       
     </footer>
@@ -142,7 +719,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" data-id="ck336wrww001qgsv9gu064dbz" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/" data-id="ck7ys4enr000ugsv93udt4iov" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" rel="tag">实验班</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li></ul>
@@ -266,7 +843,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/16/Spring%E5%AD%A6%E4%B9%A0/" data-id="ck336wrwg001bgsv93sx2gw9v" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/16/Spring%E5%AD%A6%E4%B9%A0/" data-id="ck7ys4eno000qgsv9e9ueemkh" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li></ul>
@@ -315,7 +892,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/16/2019-11-16/" data-id="ck336wrvv000cgsv92ops938q" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/16/2019-11-16/" data-id="ck7ys4ene000ggsv92nvj3l4k" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li></ul>
@@ -364,316 +941,9 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/15/2019-11-15/" data-id="ck336wrvs000bgsv98six7zej" class="article-share-link">Share</a>
+      <a data-url="http://cupidtian.club/2019/11/15/2019-11-15/" data-id="ck7ys4eph0031gsv9fjec4lne" class="article-share-link">Share</a>
       
       
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019-11-14" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/14/2019-11-14/" class="article-date">
-  <time datetime="2019-11-14T14:40:53.000Z" itemprop="datePublished">2019-11-14</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/14/2019-11-14/">2019.11.14</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>宝宝今天大姨妈来了<br>好心疼我的臭宝宝，<br>但是我好像并没有什么用。。。<br>只能逗逗宝宝开心，<br>赶快好起来呀！</p>
-<hr>
-<p>然后今天其实什么事也没有发生，<br>上午浑浑噩噩<br>中午看踢外国语，最后3-1好像<br>外国语不是很强今年哈哈<br>心理平衡一点<br>下学期我们就很强！！<br>等待下学期！  </p>
-<hr>
-<p>然后下午数据库实验，<br>有点困，<br>算是还好解决了我对触发器的问题，<br>这点还行  </p>
-<hr>
-<p>晚上上了一晚上的开发技术<br>刘勇讲的<br>中间睡了一会<br>精神还不错</p>
-<hr>
-<p>回去之后整那个数据库开发技术的软件<br>帮张宏昌弄了半天</p>
-<hr>
-<p>晚上基本上快学完了那个Js的b站课程！<br>加油啊！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/14/2019-11-14/" data-id="ck336wrwj001fgsv90vz3gpw9" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019-11-13" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/13/2019-11-13/" class="article-date">
-  <time datetime="2019-11-13T08:29:37.000Z" itemprop="datePublished">2019-11-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/2019-11-13/">2019.11.13</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>心心念念的机械宝贝键盘终于到啦！<br>非常开心<br>虽然没有想象的落差感<br>但是打字真的非常轻巧<br>声音也不是很大<br>以后他要陪伴我好久好久啦<br>他会见证我一步步变强的过程<br>嘻嘻嘻</p>
-<hr>
-<p>昨天忘写日记了<br>有了对象之后没啥烦心事了哈哈哈   </p>
-<hr>
-<p>这篇日记是我用我的机械键盘敲得<br>爽啊，<br>真的很轻松 </p>
-<img src="/2019/11/13/2019-11-13/%E9%94%AE%E7%9B%98.jpg" class="" title="宝贝儿键盘">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/13/2019-11-13/" data-id="ck336wrvp0008gsv9fzcy9vbw" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E9%94%AE%E7%9B%98/" rel="tag">键盘</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Tomca笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/13/Tomca%E7%AC%94%E8%AE%B0/" class="article-date">
-  <time datetime="2019-11-13T08:29:37.000Z" itemprop="datePublished">2019-11-13</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/13/Tomca%E7%AC%94%E8%AE%B0/">Tomcat笔记</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><p>因为tomcat都是java写的，<br>所以批处理文件执行的时候<br>他会需要找到javahome变量<br>没有的话startup就会一闪而过  </p>
-<hr>
-<p>tomcat的报错信息<br>可以在他的logs目录下查看日志信息   </p>
-<hr>
-<ol>
-<li><p>一般将tomcat的端口号改为：80  </p>
-<ul>
-<li>原因：80端口是http协议的默认端口号<br>在访问的时候不需要输入localhost：后面的80<br>直接浏览器输入localhost就可以了  </li>
-<li>这就是我当时为什么刷新的时候端口号不见了的原因  </li>
-</ul>
-</li>
-<li><p>关闭</p>
-<ul>
-<li>强制关闭就是点x</li>
-<li>正常关闭就是点那个shutup</li>
-<li>或者在startup里输入CTRL+c</li>
-</ul>
-</li>
-<li><p>访问  </p>
-<ul>
-<li><p>比如webapps里面有一个hello项目，访问的时候直接</p>
-</li>
-<li><p>输入localhost\hello 就可以–虚拟路径</p>
-</li>
-<li><p>部署项目的时候把项目打成一个war包（压缩的形式）<br>然后复制到webapps里面<br>然后他就会自动的解压缩<br>删除war包的时候也可以自动删除  </p>
-</li>
-<li><p>在conf\catalina\localhost创建任意名称的xml文件。在文件中编写</p>
-<Context docBase= "D:\hello">
-  * 虚拟目录：xml文件的名称
-
-
-</li>
-</ul>
-</li>
-</ol>
-<ol start="4">
-<li><p>结构</p>
-<ul>
-<li>动态静态的文件项目</li>
-</ul>
-<ol>
-<li>如果项目里面有WEB-IFO说明就是动态的项目<br> – WEB-IFO<pre><code>--  里面有web.xml 核心配置文件
--- classes目录：放置字节码文件
--- lib目录：放置项目依赖的jar包</code></pre></li>
-</ol>
-</li>
-</ol>
-<pre><code>2. 利用开发工具部署
-
-    -- 有热部署
-        -- 在配置里改成update资源的时候更新
-        -- 不然的话，需要重新启动服务器</code></pre><h2 id="servlet：sever-applet"><a href="#servlet：sever-applet" class="headerlink" title="servlet：sever applet"></a>servlet：sever applet</h2><hr>
-<pre><code>* 概念： 运行在服务器上的小程序
-    * servlet 接口 定义了java类被浏览器访问到（tomcat识别）的规则
-        -- A servelet is a small java program that runs within a Web server 
-    * 将来我们自定义一个类，实现servelet接口，复写方法。 这就是称之为一个serverlet
-
-* 快速入门
-    * 创建一个javaee项目
-        -- 然后写吧！ implements servelet</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/13/Tomca%E7%AC%94%E8%AE%B0/" data-id="ck336wrwo001ggsv98gu90959" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-2019-11-10" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/11/2019-11-10/" class="article-date">
-  <time datetime="2019-11-11T00:45:11.000Z" itemprop="datePublished">2019-11-11</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Diary/">Diary</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/11/2019-11-10/">Sun Nov 10 2019 00:00:00 GMT+0800 (GMT+08:00)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天臭宝宝找我和好了，<br>希望我们的爱情可以坚定不移的走下去！<br>接吻的时候眼泪还是忍不住的流<br>把博客的网址给臭宝宝知道了….<br>以后写博客要小心了….臭宝宝</p>
-<hr>
-<p>跟学长说了一下，<br>进实验室基本是差不多了，<br>臭宝宝在605也有着落了，<br>希望我们变得很强！<br>干他丫的，<br>马世东，<br>我记住这个名字了。  </p>
-<hr>
-<p>凌晨一点睡觉，还可以。<br>抗击脱发第二天！</p>
-<hr>
-<p>最近学习的欲望十分强烈，<br>希望可以保持下去。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/11/2019-11-10/" data-id="ck336wrvl0006gsv9cftu0z7f" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%84%B1%E5%8F%91/" rel="tag">脱发</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-解决Tomcat8080问题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/" class="article-date">
-  <time datetime="2019-11-09T15:37:17.000Z" itemprop="datePublished">2019-11-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a>►<a class="article-category-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/">解决Tomcat8080问题</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>2019年11月9日23:42:15</p>
-</blockquote>
-<p>花了好久终于解决了这个问题，<br>就是安装Tomcat后8080端口打不开的问题<br><a href="https://ask.csdn.net/questions/674431?page=5&sort=votes_count" target="_blank" rel="noopener">解决方案</a></p>
-<hr>
-<p>这次居然不是大网站上的</p>
-<p>解决期间遇到了两个问题<br>第一个是8080被谁占用了呢？  </p>
-<img src="/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/%E6%9F%A5%E8%AF%A28080.png" class="" title="查询">  
-<p>是一个叫 <code>ApplicationWebServer.exe</code> 的<br>但据说这个是系统跟网络请求有关的东西，<br>我怕关掉之后，<br>会极其麻烦  </p>
-
-<hr>
-<p>解决方案好像就是换了个端口  </p>
-<img src="/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/%E8%A7%A3%E5%86%B3%E5%A4%84.png" class="" title="解决路径上面有">
-<hr>
-<p>然后成功出现我的Tomcat！</p>
-<img src="/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/Tomcat.png" class="" title="Tomcat">
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://cupidtian.club/2019/11/09/%E8%A7%A3%E5%86%B3Tomcat8080%E9%97%AE%E9%A2%98/" data-id="ck336wrwx001sgsv935rualm3" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tomcat/" rel="tag">Tomcat</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E8%A7%A3%E5%86%B3/" rel="tag">解决</a></li></ul>
-
     </footer>
   </div>
   
@@ -685,7 +955,7 @@
 
   <nav id="page-nav">
     
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -696,7 +966,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A5%BD%E6%96%87/">好文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/Spring/">Spring</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Diary/">Diary</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%A5%BD%E6%96%87/">好文</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/">编程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/">JavaWeb</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/JavaWeb/Spring/">Spring</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/">实验室</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E5%AE%9E%E9%AA%8C%E5%AE%A4/JDBC/">JDBC</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E7%A8%8B/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BC%80%E5%8F%91%E6%8A%80%E6%9C%AF/">数据库开发技术</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E9%9A%8F%E7%AC%94/">随笔</a></li></ul>
     </div>
   </div>
 
@@ -706,7 +976,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/" rel="tag">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/" rel="tag">first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%89%8B/" rel="tag">分手</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E6%B2%B9/" rel="tag">加油</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%B1%E7%9C%A0/" rel="tag">失眠</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" rel="tag">实验班</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B4%AF/" rel="tag">累</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%B1%E5%8F%91/" rel="tag">脱发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%A3%E5%86%B3/" rel="tag">解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%AE%E7%9B%98/" rel="tag">键盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/" rel="tag">C#</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JDBC/" rel="tag">JDBC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaWeb/" rel="tag">JavaWeb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Spring/" rel="tag">Spring</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tomcat/" rel="tag">Tomcat</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/first/" rel="tag">first</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" rel="tag">体育课</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%86%E6%89%8B/" rel="tag">分手</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E6%B2%B9/" rel="tag">加油</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%B1%E7%9C%A0/" rel="tag">失眠</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C/" rel="tag">实验</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" rel="tag">实验室</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" rel="tag">实验班</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%88%B1/" rel="tag">爱</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%B4%AF/" rel="tag">累</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%84%B1%E5%8F%91/" rel="tag">脱发</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%85%B0/" rel="tag">腰</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A7%A3%E5%86%B3/" rel="tag">解决</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%85%8D%E7%BD%AE/" rel="tag">配置</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%AE%E7%9B%98/" rel="tag">键盘</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%9A%8F%E7%AC%94/" rel="tag">随笔</a></li></ul>
     </div>
   </div>
 
@@ -716,7 +986,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/JDBC/" style="font-size: 13.33px;">JDBC</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 10px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%8A%A0%E6%B2%B9/" style="font-size: 10px;">加油</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 20px;">实验室</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" style="font-size: 10px;">实验班</a> <a href="/tags/%E7%88%B1/" style="font-size: 16.67px;">爱</a> <a href="/tags/%E7%B4%AF/" style="font-size: 10px;">累</a> <a href="/tags/%E8%84%B1%E5%8F%91/" style="font-size: 10px;">脱发</a> <a href="/tags/%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">解决</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a> <a href="/tags/%E9%94%AE%E7%9B%98/" style="font-size: 10px;">键盘</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
+      <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/JDBC/" style="font-size: 15px;">JDBC</a> <a href="/tags/JavaWeb/" style="font-size: 10px;">JavaWeb</a> <a href="/tags/Spring/" style="font-size: 10px;">Spring</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/first/" style="font-size: 10px;">first</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E4%BD%93%E8%82%B2%E8%AF%BE/" style="font-size: 12.5px;">体育课</a> <a href="/tags/%E5%88%86%E6%89%8B/" style="font-size: 10px;">分手</a> <a href="/tags/%E5%89%8D%E7%AB%AF/" style="font-size: 10px;">前端</a> <a href="/tags/%E5%8A%A0%E6%B2%B9/" style="font-size: 10px;">加油</a> <a href="/tags/%E5%A4%B1%E7%9C%A0/" style="font-size: 10px;">失眠</a> <a href="/tags/%E5%AE%9E%E9%AA%8C/" style="font-size: 10px;">实验</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E5%AE%A4/" style="font-size: 20px;">实验室</a> <a href="/tags/%E5%AE%9E%E9%AA%8C%E7%8F%AD/" style="font-size: 10px;">实验班</a> <a href="/tags/%E7%88%B1/" style="font-size: 17.5px;">爱</a> <a href="/tags/%E7%B4%AF/" style="font-size: 10px;">累</a> <a href="/tags/%E8%84%B1%E5%8F%91/" style="font-size: 10px;">脱发</a> <a href="/tags/%E8%85%B0/" style="font-size: 10px;">腰</a> <a href="/tags/%E8%A7%A3%E5%86%B3/" style="font-size: 10px;">解决</a> <a href="/tags/%E9%85%8D%E7%BD%AE/" style="font-size: 10px;">配置</a> <a href="/tags/%E9%94%AE%E7%9B%98/" style="font-size: 10px;">键盘</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 10px;">随笔</a>
     </div>
   </div>
 
@@ -738,23 +1008,23 @@
       <ul>
         
           <li>
-            <a href="/2019/11/17/C#%E5%8F%AF%E8%A7%86%E5%8C%96%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">C#可视化程序设计</a>
+            <a href="/2019/11/24/2019-11-24/">2019年11月24日</a>
           </li>
         
           <li>
-            <a href="/2019/11/16/mybatis-generator%E7%94%9F%E6%88%90%E6%96%87%E4%BB%B6%E9%85%8D%E7%BD%AE/">mybatis-generator生成文件</a>
+            <a href="/2019/11/24/Linux%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Linux学习笔记</a>
           </li>
         
           <li>
-            <a href="/2019/11/16/Spring%E5%AD%A6%E4%B9%A0/">Spring学习</a>
+            <a href="/2019/11/24/%E5%A4%87%E5%BF%98%E5%BD%95/">备忘录</a>
           </li>
         
           <li>
-            <a href="/2019/11/16/2019-11-16/">2019.11.16</a>
+            <a href="/2019/11/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8A%E6%9C%BA%E5%AE%9E%E9%AA%8C1(1123)/">2019.11.23</a>
           </li>
         
           <li>
-            <a href="/2019/11/15/2019-11-15/">2019.11.15</a>
+            <a href="/2019/11/20/2019-11-20/">2019.11.20</a>
           </li>
         
       </ul>
@@ -769,7 +1039,7 @@
   
   <div class="outer">
     <div id="footer-info" class="inner">
-      &copy; 2019 CupidTian<br>
+      &copy; 2020 CupidTian<br>
       Seted_by <a href="http://www.cupidtian.club/" target="_blank">CupidTian</a>
     </div>
   </div>
